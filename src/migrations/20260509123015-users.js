@@ -16,13 +16,43 @@ await queryInterface.createTable('users', {
     allowNull: false,
     primaryKey: true
   },
-  emai: {
+
+  email: {
     type: Sequelize.STRING(30),
     allowNull: false
   },
   password: {
     type: Sequelize.STRING(255),
     allowNull: false
+  },
+
+})
+
+await queryInterface.createTable ('escolas', {
+  id: {
+    type: Sequelize.INTERGER,
+    primaryKey:true,
+    allowNull: false,
+    autoIncrement: true
+  },
+  name: {
+    type: Sequelize.STRING(50),
+    allowNull: false
+  },
+  cnpj: {
+    type: Sequelize.STRING(20),
+    allowNull: false
+  },
+  created_at: {
+    type: Sequelize.DATE,
+    allowNull: false,
+    defaultvalue: Sequelize.NOW
+  },
+  update_at: {
+    type: Sequelize.DATE,
+    allowNull: false,
+    defaultvalue: Sequelize.NOW,
+    onUpdate: Sequelize.NOW
   }
 })
   },
@@ -34,5 +64,7 @@ await queryInterface.createTable('users', {
      * Example:
      * await queryInterface.dropTable('users');
      */
+    await queryInterface.dropTable('escolas');
+    await queryInterface.dropTable('users');
   }
 };
