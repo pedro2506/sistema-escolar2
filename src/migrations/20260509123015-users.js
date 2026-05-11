@@ -30,7 +30,7 @@ await queryInterface.createTable('users', {
 
 await queryInterface.createTable ('escolas', {
   id: {
-    type: Sequelize.INTERGER,
+    type: Sequelize.INTEGER,
     primaryKey:true,
     allowNull: false,
     autoIncrement: true
@@ -46,12 +46,12 @@ await queryInterface.createTable ('escolas', {
   created_at: {
     type: Sequelize.DATE,
     allowNull: false,
-    defaultvalue: Sequelize.NOW
+    defaultValue: Sequelize.NOW
   },
   update_at: {
     type: Sequelize.DATE,
     allowNull: false,
-    defaultvalue: Sequelize.NOW,
+    defaultValue: Sequelize.NOW,
     onUpdate: Sequelize.NOW
   }
 })

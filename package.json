@@ -5,20 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "migration:create": "npx sequelize-cli migration:generate",
+    "migrate": "npx sequelize-cli db:migrate",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo"
+
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kelvysmoura/sistema-escolar.git"
+    "url": "git+https://github.com/pedro2506/sistema-escolar2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/kelvysmoura/sistema-escolar/issues"
+    "url": "https://github.com/pedro2506/sistema-escolar2/issues"
   },
-  "homepage": "https://github.com/kelvysmoura/sistema-escolar#readme",
+  "homepage": "https://github.com/pedro2506/sistema-escolar2/#readme",
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
