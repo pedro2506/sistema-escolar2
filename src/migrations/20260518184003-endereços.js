@@ -1,4 +1,6 @@
 'use strict';
+const CreatedAndUpdated = require('../models/CreatedAndUpdated');
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
