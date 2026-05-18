@@ -27,7 +27,7 @@ module.exports = {
       complement: {
         type: Sequelize.STRING
       },
-      CreatedAndUpdated
+      ...CreatedAndUpdated
     });
   },
   async down(queryInterface, Sequelize) {

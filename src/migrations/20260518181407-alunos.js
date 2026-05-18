@@ -33,7 +33,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING(20)
       },
-      CreatedAndUpdated
+      ...CreatedAndUpdated
     });
   },
   async down(queryInterface, Sequelize) {
