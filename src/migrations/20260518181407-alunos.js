@@ -5,7 +5,7 @@ const CreatedAndUpdated = require('../models/CreatedAndUpdated');
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Alunos', {
+    await queryInterface.createTable('alunos', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -29,17 +29,14 @@ module.exports = {
         type: Sequelize.STRING(50),
         allowNull: false
       },
-      document: {
-        type: Sequelize.STRING(50),
-        allowNull: false
-      },
       document_type: {
         allowNull: false,
         type: Sequelize.STRING(20)
       },
-      ...CreatedAndUpdated
+      CreatedAndUpdated
     });
   },
   async down(queryInterface, Sequelize) {
+    await queryInterface.dropTable('alunos');
   }
 };

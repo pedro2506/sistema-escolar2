@@ -50,7 +50,7 @@ module.exports = {
         allowNull: false,
         defaultValue: Sequelize.NOW,
       },
-      ...CreatedUpdated,
+      CreatedUpdated,
     });
   },
 

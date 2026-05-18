@@ -48,7 +48,7 @@ await queryInterface.createTable ('escolas', {
     allowNull: false,
     defaultValue: Sequelize.NOW
   },
-  update_at: {
+  updated_at: {
     type: Sequelize.DATE,
     allowNull: false,
     defaultValue: Sequelize.NOW,
@@ -64,7 +64,7 @@ await queryInterface.createTable ('escolas', {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.dropTable('escolas');
+    
     await queryInterface.dropTable('users');
   }
 };
