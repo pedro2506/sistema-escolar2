@@ -50,10 +50,11 @@ module.exports = {
         allowNull: false,
         defaultValue: Sequelize.NOW,
       },
+      ...CreatedUpdated,
     });
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('colaboradores');
+
   },
 };
