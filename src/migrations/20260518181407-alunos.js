@@ -13,20 +13,25 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING(20)
+        type: Sequelize.STRING(20),
         allowNull: false
       },
       surname: {
+        
+        type: Sequelize.STRING(20),
         allowNull: false
-        type: Sequelize.STRING(20)
       },
       email: {
-        type: Sequelize.STRING(50)
+        type: Sequelize.STRING(50),
         allowNull: false
       },
       document: {
-        allowNull: false,
-        type: Sequelize.STRING(20)
+        type: Sequelize.STRING(50),
+        allowNull: false
+      },
+      document: {
+        type: Sequelize.STRING(50),
+        allowNull: false
       },
       document_type: {
         allowNull: false,
