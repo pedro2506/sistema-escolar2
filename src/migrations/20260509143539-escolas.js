@@ -35,7 +35,6 @@ module.exports = {
         defaultValue: Sequelize.NOW,
         onUpdate: Sequelize.NOW
       }
-      ...CreatedAndUpdated
     });
   },
 
