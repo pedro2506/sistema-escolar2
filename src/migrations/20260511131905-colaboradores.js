@@ -51,7 +51,7 @@ module.exports = {
         defaultValue: Sequelize.NOW,
       },
       ...CreatedUpdated,
-    });
+    })
   },
 
   async down(queryInterface, Sequelize) {
