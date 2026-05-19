@@ -42,8 +42,8 @@ module.exports = {
       },
       start_time:Sequelize.TIME,
       end_time:Sequelize.TIME,
-      start_date:Sequelize.DATE,
-      end_date:Sequelize.DATE,
+      start_date:Sequelize.DATEONLY,
+      end_date:Sequelize.DATEONLY,
 
       ...CreatedAndUpdated
 
