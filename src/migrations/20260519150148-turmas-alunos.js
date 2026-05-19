@@ -1,83 +1,34 @@
 'use strict';
 
-const CreatedAndUpdated = require('../models/CreatedAndUpdated');
-
 /** @type {import('sequelize-cli').Migration} */
 
 module.exports = {
 
   async up(queryInterface, Sequelize) {
 
-    await queryInterface.createTable('turmas', {
+    await queryInterface.createTable('turmas_alunos', {
 
-      id: {
-        type: Sequelize.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
-        allowNull: false
-      },
-
-      curso_id: {
+      turma_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-
         references: {
-          model: 'cursos',
+          model: 'turmas',
           key: 'id'
+        }
         },
 
-        onUpdate: 'CASCADE',
-        onDelete: 'RESTRICT'
-      },
-
-      colaborador_id: {
+      aluno_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-
         references: {
-          model: 'colaboradores',
+          model: 'alunos',
           key: 'id'
-        },
-
-        onUpdate: 'CASCADE',
-        onDelete: 'RESTRICT'
-      },
-
-      name: {
-        type: Sequelize.CHAR(4),
-        allowNull: false
-      },
-
-      room: {
-        type: Sequelize.STRING(50),
-        allowNull: false
-      },
-
-      start_time: {
-        type: Sequelize.TIME
-      },
-
-      end_time: {
-        type: Sequelize.TIME
-      },
-
-      start_date: {
-        type: Sequelize.DATEONLY
-      },
-
-      end_date: {
-        type: Sequelize.DATEONLY
-      },
-
-      ...CreatedAndUpdated
-
-    });
-
+      }
+    },
+      })
   },
 
   async down(queryInterface, Sequelize) {
-
-    await queryInterface.dropTable('turmas');
 
   }
 

@@ -16,68 +16,42 @@ module.exports = {
         autoIncrement: true,
         allowNull: false
       },
-
-      curso_id: {
+        curso_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-
         references: {
           model: 'cursos',
           key: 'id'
-        },
-
-        onUpdate: 'CASCADE',
-        onDelete: 'RESTRICT'
+        }
       },
-
-      colaborador_id: {
+        colaborador_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-
         references: {
           model: 'colaboradores',
           key: 'id'
+        }
         },
-
-        onUpdate: 'CASCADE',
-        onDelete: 'RESTRICT'
-      },
-
-      name: {
+        name: {
         type: Sequelize.CHAR(4),
         allowNull: false
       },
-
-      room: {
+        room: {
         type: Sequelize.STRING(50),
         allowNull: false
       },
-
-      start_time: {
-        type: Sequelize.TIME
-      },
-
-      end_time: {
-        type: Sequelize.TIME
-      },
-
-      start_date: {
-        type: Sequelize.DATEONLY
-      },
-
-      end_date: {
-        type: Sequelize.DATEONLY
-      },
+      start_time:Sequelize.TIME,
+      end_time:Sequelize.TIME,
+      start_date:Sequelize.DATE,
+      end_date:Sequelize.DATE,
 
       ...CreatedAndUpdated
 
-    });
-
+    })
   },
 
   async down(queryInterface, Sequelize) {
 
-    await queryInterface.dropTable('turmas');
 
   }
 
