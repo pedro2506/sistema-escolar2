@@ -40,17 +40,8 @@ module.exports = {
         type: Sequelize.STRING(10),
         allowNull: false,
       },
-      created_at: {
-        type: Sequelize.DATE,
-        allowNull: false,
-        defaultValue: Sequelize.NOW,
-      },
-      updated_at: {
-        type: Sequelize.DATE,
-        allowNull: false,
-        defaultValue: Sequelize.NOW,
-      },
-      ...CreatedUpdated,
+      
+      ...CreatedAndUpdated,
     })
   },
 
